@@ -11,7 +11,28 @@
 
 <script>
 export default {
-  props: ['icon', 'iconPositioin']
+  // props: ['icon', 'iconPositioin']
+  // 下面这种 props 的写法，可解决 class 中有 undefined 的情况
+  props: {
+    icon: {},
+    iconPositioin: {
+      type: String,
+      default: 'left',
+      // validator 是属性的检查器
+      validator(value) {
+        // if(value !== 'left' && value !== 'right') {
+        //   return false
+        // }else {
+        //   // 如果满足条件，则必须 return 一个 true，不然还是以为是 false
+        //   return true
+        // }
+        // 三种方式简化上面的代码
+        return value === 'left' || value === 'right'
+        // 方式1: return !(value !== 'left' && value !== 'right');
+        // 方式2三目运算符: return value !== 'left' && value !== 'right' ? false : true
+      }
+    }
+  }
 }
 </script>
 
