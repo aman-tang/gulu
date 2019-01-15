@@ -35,9 +35,9 @@
 </head>
 <body>
   <div id="app">
-    <g-button></g-button>
-    <g-button icon="settings" icon-positioin="left">按钮</g-button>
-    <g-button icon="settings" icon-positioin="right">按钮</g-button>
+    <g-button :loading="loading2" @click="loading2 = !loading2">按钮</g-button>
+    <g-button  :loading="loading1" @click="loading1 = !loading1" icon="settings" icon-positioin="left">按钮</g-button>
+    <g-button icon="settings" :loading="loading3" @click="loading3 = !loading3" icon-positioin="right">按钮</g-button>
   </div>
 
   <script src="./src/app.js"></script>

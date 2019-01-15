@@ -1,7 +1,7 @@
 <template>
-   <button class="g-button" :class="{[`icon-${iconPositioin}`]:true}">
-    <g-icon class="icon" v-if="icon" :name="icon"></g-icon>
-    <g-icon class="loading" name="loading"></g-icon>
+   <button class="g-button" :class="{[`icon-${iconPositioin}`]:true}" @click="$emit('click')">
+    <g-icon class="icon" v-if="icon && !loading" :name="icon"></g-icon>
+    <g-icon class="loading icon" v-if="loading" name="loading"></g-icon>
     <div class="content">
       <slot></slot>
     </div>
@@ -14,6 +14,10 @@ export default {
   // 下面这种 props 的写法，可解决 class 中有 undefined 的情况
   props: {
     icon: {},
+    loading: {
+      type: Boolean,
+      default: false
+    },
     iconPositioin: {
       type: String,
       default: 'left',
