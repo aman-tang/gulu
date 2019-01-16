@@ -1,5 +1,5 @@
 <template>
-   <button class="g-button" :class="{[`icon-${iconPositioin}`]:true}" @click="$emit('click')">
+   <button class="g-button" :class="{[`icon-${iconPosition}`]:true}" @click="$emit('click')">
     <g-icon class="icon" v-if="icon && !loading" :name="icon"></g-icon>
     <g-icon class="loading icon" v-if="loading" name="loading"></g-icon>
     <div class="content">
@@ -10,7 +10,7 @@
 
 <script>
 export default {
-  // props: ['icon', 'iconPositioin']
+  // props: ['icon', 'iconPosition']
   // 下面这种 props 的写法，可解决 class 中有 undefined 的情况
   props: {
     icon: {},
@@ -18,7 +18,7 @@ export default {
       type: Boolean,
       default: false
     },
-    iconPositioin: {
+    iconPosition: {
       type: String,
       default: 'left',
       // validator 是属性的检查器
