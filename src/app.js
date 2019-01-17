@@ -23,6 +23,7 @@ chai.use(spies)
 const expect = chai.expect
 // 单元测试
 {
+  // 1. 测试按钮含有 icon
   // 动态生成了按钮，通过 JS 把按钮写到了页面
   // 先把 Button 组件变成了构造函数，然后通过这个构造函数声明一个 vm 实例，再把实例挂载到 #test 上
   const Constructor = Vue.extend(Button)
@@ -31,7 +32,7 @@ const expect = chai.expect
       icon: 'settings'
     }
   })
-  // vm.$mount('#test')
+  // vm.$mount('#test')~
   vm.$mount()
   // mount 中也可以什么都没有
   // 我期待 use 和 href 是 i-settings，因为我设置的 icon 是 settings；
@@ -44,6 +45,7 @@ const expect = chai.expect
 }
 
 {
+  // 2. 测试如果传入一个 loading，那么会显示一个 href 为 #i-loading 的 icon
   const Constructor = Vue.extend(Button)
   const vm = new Constructor({
     propsData: {

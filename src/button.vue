@@ -9,7 +9,12 @@
 </template>
 
 <script>
+  import Icon from './icon'
 export default {
+  // 局部注册组件
+  components: {
+    'g-icon': Icon
+  },
   // props: ['icon', 'iconPosition']
   // 下面这种 props 的写法，可解决 class 中有 undefined 的情况
   props: {
