@@ -1,14 +1,26 @@
-# gulu UI
+# gulu UI —— 一个 Vue UI 组件
+[![Build Status](https://travis-ci.org/aman-tang/gulu.svg?branch=master)](https://travis-ci.org/aman-tang/gulu)
 
-## gulu UI 是什么？
+## 介绍
 gulu 意为轱辘，车轱辘，即车轮。gulu UI 是基于 Vue 实现的 UI 框架。
 
-## 安装
+## 开始使用
+1. 安装
 使用本框架前，请在 CSS 中开启 border-box：
 
 ```
 * {box-sizing: border-box;}
 ```
+
+## 文档
+
+## 提问
+
+## 变更记录
+
+## 联系方式
+
+## 贡献代码
 
 ## gulu UI 有哪些轮子？
 1. 按钮
