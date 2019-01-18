@@ -2,15 +2,17 @@
 [![Build Status](https://travis-ci.org/aman-tang/gulu.svg?branch=master)](https://travis-ci.org/aman-tang/gulu)
 
 ## 介绍
-gulu 意为轱辘，车轱辘，即车轮。gulu UI 是基于 Vue 实现的 UI 框架。
+gulu 意为轱辘，车轱辘，即车轮。这是我在学习 Vue 过程中做的一个 UI 框架，希望对你有用。
 
 ## 开始使用
 1. 安装
 使用本框架前，请在 CSS 中开启 border-box：
 
 ```
-* {box-sizing: border-box;}
+*, *::before, *::after {box-sizing: border-box;}
+
 ```
+IE 8 及以上浏览器都支持此样式。
 
 ## 文档
 
