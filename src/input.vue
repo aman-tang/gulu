@@ -1,7 +1,12 @@
 <template>
   <!-- <div class="wapper" :class={'error': error}> -->
   <div class="wapper" :class={error}> <!-- 简写 -->
-    <input :value="value" type="text" :disabled="disabled" :readonly="readonly">
+    <input :value="value" type="text" :disabled="disabled" :readonly="readonly"
+    @change="$emit('change', $event)"
+    @input="$emit('input', $event)"
+    @focus="$emit('focus', $event)"
+    @blur="$emit('blur', $event)"
+    >
     <!-- 若不想因为 icon 和 span 而多加一个 div 来写 v-if，可以加一个 template 写 v-if，dom 中不会出现多余标签  -->
     <template v-if="error">
       <icon name="error" class="icon-error"></icon>
