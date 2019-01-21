@@ -11,5 +11,7 @@
     else document.attachEvent && (c = t, o = s.document, i = !1, l = function() { i || (i = !0, c()) }, (n = function() { try { o.documentElement.doScroll("left") } catch (t) { return void setTimeout(n, 50) } l() })(), o.onreadystatechange = function() { "complete" == o.readyState && (o.onreadystatechange = null, l()) });
     var c, o, i, l, n
   }(function() {
-      var t, e, c, o, i, l;
-      (t = document.createElement("div")).innerHTML = n, n = null, (e = t.getElementsByTagName("svg")[0]) && (e.setAttribute("aria-hidden", "true"), e.style.position = "absolute", e.style.width = 0, e.style.height = 0, e.style.overflow = "hidden", c = e, (o = document.body).firstChild ? (i = c, (l = o.firstChild).parentNode.insertBefore(i, l)) : o.appendChild(c)) }) }(window);
+    var t, e, c, o, i, l;
+    (t = document.createElement("div")).innerHTML = n, n = null, (e = t.getElementsByTagName("svg")[0]) && (e.setAttribute("aria-hidden", "true"), e.style.position = "absolute", e.style.width = 0, e.style.height = 0, e.style.overflow = "hidden", c = e, (o = document.body).firstChild ? (i = c, (l = o.firstChild).parentNode.insertBefore(i, l)) : o.appendChild(c))
+  })
+}(window);

@@ -40,54 +40,68 @@
 </head>
 <body>
   <div id="app">
-    <g-row>
+    <g-row gutter="20">
       <g-col>1</g-col>
       <g-col>2</g-col>
     </g-row>
-    <g-row>
+    <g-row gutter="20">
       <g-col>1</g-col>
       <g-col>2</g-col>
       <g-col>3</g-col>
     </g-row>
-    <g-row>
+    <g-row gutter="20">
       <g-col>1</g-col>
       <g-col>2</g-col>
       <g-col>3</g-col>
       <g-col>4</g-col>
     </g-row>
-    <g-row>
+    <g-row gutter="20">
       <g-col span="2">2</g-col>
       <g-col span="22">22</g-col>
     </g-row>
-    <g-row>
+    <g-row gutter="20">
+      <g-col span="2">2</g-col>
+      <g-col span="20" offset="2">22</g-col>
+    </g-row>
+    <g-row gutter="20">
       <g-col span="4">4</g-col>
       <g-col span="20">20</g-col>
     </g-row>
+    <g-row gutter="20">
+      <g-col span="4">4</g-col>
+      <g-col span="8" offset="2">8</g-col>
+      <g-col span="8" offset="2">8</g-col>
+    </g-row>
+    <g-row gutter="20">
+      <g-col span="4">4</g-col>
+      <g-col span="4" offset="6">4</g-col>
+      <g-col span="8" offset="2">8</g-col>
+    </g-row>
   </div>
+  <hr>
+  <div class="box">
+    <g-input value="张三" disabled></g-input>
+    <g-input value="里斯本" readonly></g-input>
+    <g-input value="王五"></g-input>
+  </div>
+  <div class="box">
+    <g-input v-model="message"></g-input>
+    <p>{{message}}</p>
+  </div>
+  <div>
+    <g-input value="五" error="姓名不能少于2个字"></g-input>
+  </div>
+  <div class="box">
+    <g-button :loading="loading2" @click="loading2 = !loading2">按钮</g-button>
+    <g-button :loading="loading1" @click="loading1 = !loading1" icon="settings" icon-position="left">按钮</g-button>
+    <g-button icon="settings" :loading="loading3" @click="loading3 = !loading3" icon-position="right">按钮</g-button>
 
-    <div class="box">
-      <g-input value="张三" disabled></g-input>
-      <g-input value="里斯本" readonly></g-input>
-      <g-input value="王五"></g-input>
-    </div>
-    <div class="box">
-      <g-input v-model="message"></g-input>
-      <p>{{message}}</p>
-    </div>
-    <div>
-      <g-input value="五" error="姓名不能少于2个字"></g-input>
-    </div>
-    <div class="box">
-      <g-button :loading="loading2" @click="loading2 = !loading2">按钮</g-button>
-      <g-button :loading="loading1" @click="loading1 = !loading1" icon="settings" icon-position="left">按钮</g-button>
-      <g-button icon="settings" :loading="loading3" @click="loading3 = !loading3" icon-position="right">按钮</g-button>
-
-      <g-button-group>
-        <g-button icon="left">上一页</g-button>
-        <g-button>更多</g-button>
-        <g-button icon="right" icon-position="right">下一页</g-button>
-      </g-button-group>
-    </div>
+    <g-button-group>
+      <g-button icon="left">上一页</g-button>
+      <g-button>更多</g-button>
+      <g-button icon="right" icon-position="right">下一页</g-button>
+    </g-button-group>
+  </div>
 
     <div id="test"></div>
   </div>
