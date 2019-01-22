@@ -1,5 +1,5 @@
 <template>
-  <div class="footer">
+  <div class="header">
     <slot></slot>
   </div>
 </template>
@@ -9,7 +9,7 @@
 </script>
 
 <style lang="scss" scoped>
-  .footer {
+  .header {
 
   }
 </style>

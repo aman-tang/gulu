@@ -14,7 +14,6 @@
     }
 
     #app {
-      margin: 20px;
     }
 
     body {
@@ -33,51 +32,22 @@
     }
   </style>
   <style>
-  .box {
-    margin: 20px;
-  }
-  .row {
-    display: flex;
-  }
   .demo {
-    background-color: #bbb;
     border: 1px solid #666;
-    height: 100px;
+    min-height: 100px;
   }
   </style>
 </head>
 <body>
   <div id="app">
-    <g-row>
-      <g-col span="23" offset="1" :narrow-pc="{span:12, offset:12}">
-        <div class="demo"></div>
-      </g-col>
-    </g-row>
-  </div>
-  <hr>
-  <div class="box">
-    <g-input value="张三" disabled></g-input>
-    <g-input value="里斯本" readonly></g-input>
-    <g-input value="王五"></g-input>
-  </div>
-  <div class="box">
-    <g-input v-model="message"></g-input>
-    <p>{{message}}</p>
-  </div>
-  <div>
-    <g-input value="五" error="姓名不能少于2个字"></g-input>
-  </div>
-  <div class="box">
-    <g-button :loading="loading2" @click="loading2 = !loading2">按钮</g-button>
-    <g-button :loading="loading1" @click="loading1 = !loading1" icon="settings" icon-position="left">按钮</g-button>
-    <g-button icon="settings" :loading="loading3" @click="loading3 = !loading3" icon-position="right">按钮</g-button>
-
-    <g-button-group>
-      <g-button icon="left">上一页</g-button>
-      <g-button>更多</g-button>
-      <g-button icon="right" icon-position="right">下一页</g-button>
-    </g-button-group>
-  </div>
+    <g-layout style="height:100vh;">
+        <g-sider class="demo">sider</g-sider>
+      <g-layout>
+        <g-header class="demo">header</g-header>
+        <g-content class="demo">content</g-content>
+        <g-footer class="demo">footer</g-footer>
+      </g-layout>
+    </g-layout>
   </div>
 
   <script src="./src/app.js"></script>
