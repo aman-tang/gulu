@@ -18,7 +18,9 @@
   export default {
     name: 'GuluCol',
     props: {
-      span: [Number, String],
+      span: {
+        type: [Number, String]
+      },
       offset: {
         type: [Number, String]
       },
@@ -63,7 +65,7 @@
         let {span, offset, ipad, narrowPc, pc, widePc} = this
         let createClasses = this.createClasses
         return [
-          ...createClasses(span, offset),
+          ...createClasses({span, offset}),
           ...createClasses(ipad, 'ipad-'),
           ...createClasses(narrowPc, 'narrow-pc-'),
           ...createClasses(pc, 'pc-'),
