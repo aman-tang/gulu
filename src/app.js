@@ -39,8 +39,17 @@ new Vue({
     message: 'hi'
   },
   created() {
-    this.$toast('文字很多文字', {
-      enableHtml: false
+    this.$toast('我是 Toast', {
+      position: 'top',
+      enableHtml: false,
+      closeButton: {
+        text: '知道了',
+        callback() {
+          console.log('他说他知道了')
+        }
+      },
+      autoClose: false,
+      autoCloseDelay: 3
     })
   },
   methods: {
