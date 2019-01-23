@@ -44,7 +44,7 @@ new Vue({
   methods: {
     showToast() {
       this.$toast('我是 Toast', {
-        position: 'top',
+        position: 'bottom',
         enableHtml: false,
         closeButton: {
           text: '知道了',
