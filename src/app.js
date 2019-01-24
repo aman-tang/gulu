@@ -61,8 +61,7 @@ new Vue({
             console.log('他说他知道了')
           }
         },
-        autoClose: true,
-        autoCloseDelay: 3
+        autoClose: 3
       })
     }
   }
