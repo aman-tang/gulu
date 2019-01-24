@@ -42,9 +42,18 @@ new Vue({
 
   },
   methods: {
-    showToast() {
+    showToast1(){
+      this.showToast('top')
+    },
+    showToast2(){
+      this.showToast('middle')
+    },
+    showToast3(){
+      this.showToast('bottom')
+    },
+    showToast(position) {
       this.$toast('我是 Toast', {
-        position: 'bottom',
+        position,
         enableHtml: false,
         closeButton: {
           text: '知道了',
@@ -58,5 +67,3 @@ new Vue({
     }
   }
 })
-
-// 下面的测试代码可删掉，不需要在这里测试了
